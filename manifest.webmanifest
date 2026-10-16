@@ -12,6 +12,29 @@
   "background_color": "#F4F2ED",
   "theme_color": "#171717",
   "categories": ["music", "entertainment"],
+  "shortcuts": [
+    {
+      "name": "Buscar",
+      "short_name": "Buscar",
+      "description": "Busca pistas, artistas y álbumes",
+      "url": "./#/search",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Biblioteca",
+      "short_name": "Biblioteca",
+      "description": "Tu música local, favoritos y playlists",
+      "url": "./#/home/library",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Música local",
+      "short_name": "Música local",
+      "description": "Importa y escucha archivos de este dispositivo",
+      "url": "./#/home/local_music",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ],
   "icons": [
     {
       "src": "icon-192.png",

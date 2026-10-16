@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Klang</title>
+    <title>KLANG · Reproductor musical social</title>
     <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
     <style id="expo-reset">
       /* These styles make the body full-height */
@@ -23,7 +23,179 @@
         flex: 1;
       }
     </style>
-  <link rel="icon" href="/klang/favicon.ico" /></head>
+  <link rel="icon" href="/klang/favicon.ico" />  <meta name="description" content="KLANG es un reproductor musical social: importa tu música, crea Bandes privadas y lanza sesiones Funke con la cola compartida." />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#0E0E10" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="KLANG" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="icon-192.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="KLANG" />
+    <meta property="og:title" content="KLANG · Reproductor musical social" />
+    <meta property="og:description" content="KLANG es un reproductor musical social: importa tu música, crea Bandes privadas y lanza sesiones Funke con la cola compartida." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="KLANG · Reproductor musical social" />
+    <meta name="twitter:description" content="KLANG es un reproductor musical social: importa tu música, crea Bandes privadas y lanza sesiones Funke con la cola compartida." />
+    <link rel="preconnect" href="https://brsmklxvdoudcwvjkxxj.supabase.co" crossorigin />
+    <link rel="dns-prefetch" href="https://brsmklxvdoudcwvjkxxj.supabase.co" />
+    <meta property="og:url" content="https://PuchitoGameDev.github.io/klang/" />
+    <meta property="og:image" content="https://PuchitoGameDev.github.io/klang/icon-512.png" />
+    <meta name="twitter:image" content="https://PuchitoGameDev.github.io/klang/icon-512.png" />
+    <link rel="preload" as="script" href="/klang/_expo/static/js/web/__expo-metro-runtime-37844bfe9405ed99797bdb43820a0459.js" />
+    <link rel="preload" as="script" href="/klang/_expo/static/js/web/__common-9f110d64417c737660ad471cd7aa3554.js" />
+    <link rel="preload" as="script" href="/klang/_expo/static/js/web/index-84c71100e27af526accc9f6c5f602cbb.js" />
+    <link rel="preload" as="script" href="/klang/_expo/static/js/web/Layout-84a6fc55517af4dc3c6cac8c5fd2a608.js" />
+    <style id="klang-boot-style">
+      html,
+      body {
+        background: #0e0e10;
+      }
+      @media (prefers-color-scheme: light) {
+        html,
+        body {
+          background: #f5f3ed;
+        }
+      }
+      #klang-boot {
+        --kb-block: rgba(255, 255, 255, 0.07);
+        --kb-strong: rgba(255, 255, 255, 0.11);
+        --kb-line: rgba(255, 255, 255, 0.06);
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        overflow: hidden;
+        background: #0e0e10;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        pointer-events: none;
+        animation: kb-timeout 0.25s ease 15s forwards;
+      }
+      @keyframes kb-timeout {
+        to {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+      @media (prefers-color-scheme: light) {
+        #klang-boot {
+          --kb-block: rgba(23, 23, 23, 0.06);
+          --kb-strong: rgba(23, 23, 23, 0.1);
+          --kb-line: rgba(23, 23, 23, 0.06);
+          background: #f5f3ed;
+        }
+      }
+      .kb-rail {
+        width: 220px;
+        flex: 0 0 220px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 28px 18px;
+        border-right: 1px solid var(--kb-line);
+      }
+      .kb-logo {
+        width: 92px;
+        height: 18px;
+        margin: 4px 0 22px;
+        border-radius: 6px;
+        background: var(--kb-strong);
+      }
+      .kb-nav {
+        height: 44px;
+        border-radius: 12px;
+        background: var(--kb-block);
+      }
+      .kb-nav-active {
+        background: var(--kb-strong);
+      }
+      .kb-main {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+      }
+      .kb-top {
+        height: 78px;
+        flex: 0 0 78px;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        padding: 0 32px;
+        border-bottom: 1px solid var(--kb-line);
+      }
+      .kb-search {
+        width: min(420px, 60%);
+        height: 38px;
+        border-radius: 9999px;
+        background: var(--kb-block);
+      }
+      .kb-avatar {
+        width: 32px;
+        height: 32px;
+        margin-left: auto;
+        border-radius: 9999px;
+        background: var(--kb-strong);
+      }
+      .kb-content {
+        padding: 34px 32px;
+      }
+      .kb-title {
+        width: min(280px, 42vw);
+        height: 28px;
+        border-radius: 8px;
+        background: var(--kb-strong);
+      }
+      .kb-sub {
+        width: min(380px, 58vw);
+        height: 12px;
+        margin-top: 12px;
+        border-radius: 6px;
+        background: var(--kb-block);
+      }
+      .kb-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 16px;
+        margin-top: 30px;
+      }
+      .kb-card {
+        height: 170px;
+        border-radius: 16px;
+        background: var(--kb-block);
+      }
+      .kb-row {
+        height: 56px;
+        margin-top: 12px;
+        border-radius: 12px;
+        background: var(--kb-block);
+      }
+      @media (max-width: 900px) {
+        .kb-rail {
+          display: none;
+        }
+        .kb-top {
+          height: 66px;
+          flex-basis: 66px;
+          padding: 0 18px;
+        }
+        .kb-content {
+          padding: 22px 18px;
+        }
+        .kb-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 12px;
+          margin-top: 22px;
+        }
+        .kb-card {
+          height: 148px;
+        }
+      }
+    </style>
+  </head>
 
   <body>
     <!-- Use static rendering with Expo Router to support running without JavaScript. -->
@@ -31,7 +203,34 @@
       You need to enable JavaScript to run this app.
     </noscript>
     <!-- The root element for your Expo app. -->
-    <div id="root"></div>
-  <script src="/klang/_expo/static/js/web/index-a1645228d967be90dc3106c918eecdea.js" defer></script>
+    <div id="root"></div><div id="klang-boot" aria-hidden="true">
+      <div class="kb-rail">
+        <div class="kb-logo"></div>
+        <div class="kb-nav kb-nav-active"></div>
+        <div class="kb-nav"></div>
+        <div class="kb-nav"></div>
+        <div class="kb-nav"></div>
+      </div>
+      <div class="kb-main">
+        <div class="kb-top">
+          <div class="kb-search"></div>
+          <div class="kb-avatar"></div>
+        </div>
+        <div class="kb-content">
+          <div class="kb-title"></div>
+          <div class="kb-sub"></div>
+          <div class="kb-grid">
+            <div class="kb-card"></div>
+            <div class="kb-card"></div>
+            <div class="kb-card"></div>
+            <div class="kb-card"></div>
+          </div>
+          <div class="kb-row"></div>
+          <div class="kb-row"></div>
+          <div class="kb-row"></div>
+        </div>
+      </div>
+    </div>
+  <script src="/klang/_expo/static/js/web/__expo-metro-runtime-37844bfe9405ed99797bdb43820a0459.js" defer></script><script src="/klang/_expo/static/js/web/__common-9f110d64417c737660ad471cd7aa3554.js" defer></script><script src="/klang/_expo/static/js/web/index-84c71100e27af526accc9f6c5f602cbb.js" defer></script>
 </body>
 </html>
