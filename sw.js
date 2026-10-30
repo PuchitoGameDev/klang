@@ -23,7 +23,7 @@
  * de este archivo es lo que garantiza que el navegador instale el worker nuevo,
  * borre la cache anterior y la app recargue con los bundles de este deploy.
  */
-const VERSION = 'v9e370ecf9dcc';
+const VERSION = 'v1b7e0da66c02';
 const CACHE = `klang-${VERSION}`;
 const SCOPE = self.registration ? self.registration.scope : self.location.href.replace(/sw\.js.*$/, '');
 const SHELL = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png'];
